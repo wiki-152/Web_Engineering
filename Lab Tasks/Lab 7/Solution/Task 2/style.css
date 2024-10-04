@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  #gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
+  }
+  
+  .image-container {
+    display: flex;  
+    align-items: center; 
+    gap: 10px; 
+  }
+
+  .input-container {
+    margin: 25px;
+  }
+  
+  
+  .image-container img {
+    max-width: 200px;
+    height: auto;
+    border: 3px solid #000000;
+    border-radius: 5px;
+  }
+
+  .remove-btn {
+    margin-left: 10px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  
+  
