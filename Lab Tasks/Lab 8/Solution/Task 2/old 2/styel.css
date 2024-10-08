@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    max-width: 1000px; /* Increased width to allow for more product cards in a row */
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .search-container {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
+  #searchInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    max-width: 300px; /* Input width restricted */
+  }
+  
+  #searchButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #searchButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted column size for smaller cards */
+    gap: 15px; /* Reduced gap to make cards closer */
+    justify-content: center; /* Aligns items to the center of the grid */
+    margin-top: 20px;
+  }
+  
+  .product-card {
+    padding: 10px; /* Reduced padding to make the cards smaller */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05); /* Adds a hover effect to enlarge the card slightly */
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Adds some space below the image */
+  }
+  
+  .product-card h3 {
+    margin-bottom: 10px;
+    font-size: 16px; /* Reduced font size to make the card more compact */
+  }
+  
+  .product-card p {
+    font-size: 14px; /* Smaller text for product details */
+    margin: 5px 0;
+  }
+  
+  .loading {
+    display: none;
+    color: #007bff;
+    font-size: 18px;
+  }
+  
+  .error {
+    display: none;
+    color: red;
+    font-size: 18px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .container {
+      max-width: 100%; /* Adjust container width for mobile */
+    }
+    .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust layout for smaller screens */
+    }
+  }
+  
