@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <title>Post Gallery</title>
+    <style>
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .spinner {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 3px solid #f3f3f3;
+            border-top-color: #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans antialiased p-5">
+    <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-xl font-bold mb-5">Image Gallery</h1>
+        <div id="imageGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"></div>
+        <div id="loadMoreContainer" class="mt-5">
+            <button id="loadMoreButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer transition duration-300 ease-in-out">Load More</button>
+            <div id="spinner" class="spinner hidden"></div>
+            <p id="noMoreImages" class="hidden text-red-500 mt-2">No more images to load.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

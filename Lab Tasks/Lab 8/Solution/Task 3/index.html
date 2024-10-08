@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>User Directory</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <h1>------------Directory------------</h1>
+
+        <div class="searchContainer">
+            <input type="text" id="searchInputBar" placeholder="Search by Name or Email">
+            <label for="companyDropdownFilter">Filter</label>
+            <select id="companyDropdownFilter">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div id="userCardsGrid" class="userGridStyle"></div>
+    </div>
+
+    <div id="detailsModal" class="modalOverlay">
+        <div class="modalContentBox">
+            <span class="closeButton">&times;</span>
+            <h2 id="modalHeaderName"></h2>
+            <p><strong>Email:</strong> <span id="modalContentEmail"></span></p>
+            <p><strong>Username:</strong> <span id="modalContentUsername"></span></p>
+            <p><strong>Phone:</strong> <span id="modalContentPhone"></span></p>
+            <p><strong>Website:</strong> <span id="modalContentWebsite"></span></p>
+            <p><strong>Company:</strong> <span id="modalContentCompany"></span></p>
+            <p><strong>Catch Phrase:</strong> <span id="modalContentCatchPhrase"></span></p>
+            <p><strong>Business:</strong> <span id="modalContentBusiness"></span></p>
+            <p><strong>Address:</strong> <span id="modalContentAddress"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
